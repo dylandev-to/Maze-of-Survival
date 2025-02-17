@@ -119,7 +119,9 @@ MonoBehaviour:
   bulletPrefab: {fileID: 6281584636130488581, guid: 6baa8d98dbf018f4a9f54dc8a16f66d8, type: 3}
   playerCamera: {fileID: 8756332542602636914}
   playerHand: {fileID: 3716518075485791973}
-  throwForce: 10
+  playerAnimator: {fileID: 0}
+  throwForce: 20
+  cooldown: 0.5
 --- !u!1 &3972234218263033460
 GameObject:
   m_ObjectHideFlags: 0
