@@ -16,8 +16,6 @@ public class EnemyHealth : MonoBehaviour
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;
-        Debug.Log($"{gameObject.name} took {damage} damage! Current HP: {currentHealth}");
-
         if (currentHealth <= 0)
         {
             Die();
@@ -29,5 +27,11 @@ public class EnemyHealth : MonoBehaviour
         animator.SetTrigger("isDead");
         GetComponent<Collider>().enabled = false;
         this.enabled = false;
+        Invoke(nameof(DestroySelf), 2f);
+    }
+
+    public void DestroySelf()
+    {
+        Destroy(gameObject);
     }
 }
