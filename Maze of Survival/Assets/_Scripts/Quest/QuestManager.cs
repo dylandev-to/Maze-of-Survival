@@ -8,8 +8,8 @@ public class QuestManager : MonoBehaviour
     private int keysCollected = 0;
 
     public GameObject questCompleteUI; // UI Canvas for Quest Complete
-    public GameObject portalPrefab; // Prefab to spawn when quest is complete
-    public Transform portalSpawnPoint; // Location to spawn portal
+   // public GameObject portalPrefab; // Prefab to spawn when quest is complete
+    //public Transform portalSpawnPoint; // Location to spawn portal
 
     void Start()
     {
@@ -28,9 +28,9 @@ public class QuestManager : MonoBehaviour
     void CompleteQuest()
     {
         questCompleteUI.SetActive(true); // Show UI
-        if (portalPrefab != null)
+       //if (portalPrefab != null)
         {
-            Instantiate(portalPrefab, portalSpawnPoint.position, Quaternion.identity);
+            //Instantiate(portalPrefab, portalSpawnPoint.position, Quaternion.identity);
         }
     }
 
