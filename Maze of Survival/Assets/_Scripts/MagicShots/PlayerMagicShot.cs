@@ -27,7 +27,7 @@ public class PlayerMagicShot : MonoBehaviour
                 enemyHealth.TakeDamage(damage);
             }
 
-            Destroy(gameObject);
+            //Destroy(gameObject);
         }
     }
 }

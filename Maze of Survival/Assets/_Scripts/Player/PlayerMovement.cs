@@ -36,7 +36,7 @@ public class PlayerMovement : MonoBehaviour
         float moveZ = Input.GetAxis("Vertical");
 
         Vector3 move = transform.right * moveX + transform.forward * moveZ;
-        transform.Translate(move * walkSpeed * Time.deltaTime, Space.World);
+        rb.linearVelocity = new Vector3(move.x * walkSpeed, rb.linearVelocity.y, move.z * walkSpeed);
 
         // Jumping
         isGrounded = Physics.Raycast(transform.position, Vector3.down, 2f);

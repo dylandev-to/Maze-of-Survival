@@ -7,6 +7,8 @@ public class EnemyHealth : MonoBehaviour
 
     private Animator animator;
 
+    [SerializeField] private AudioSource hurtFx;
+
     void Start()
     {
         currentHealth = maxHealth;
@@ -16,6 +18,7 @@ public class EnemyHealth : MonoBehaviour
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;
+        hurtFx.Play();
         if (currentHealth <= 0)
         {
             Die();
@@ -26,12 +29,12 @@ public class EnemyHealth : MonoBehaviour
     {
         animator.SetTrigger("isDead");
         GetComponent<Collider>().enabled = false;
-        this.enabled = false;
         Invoke(nameof(DestroySelf), 2f);
     }
 
     public void DestroySelf()
     {
+        this.enabled = false;
         Destroy(gameObject);
     }
 }
