@@ -1,4 +1,5 @@
 using UnityEngine;
+using System;
 
 public class EnemyHealth : MonoBehaviour
 {
@@ -8,6 +9,8 @@ public class EnemyHealth : MonoBehaviour
     private Animator animator;
 
     [SerializeField] private AudioSource hurtFx;
+
+    public event Action OnDeath;
 
     void Start()
     {
@@ -29,6 +32,9 @@ public class EnemyHealth : MonoBehaviour
     {
         animator.SetTrigger("isDead");
         GetComponent<Collider>().enabled = false;
+
+        OnDeath?.Invoke();
+
         Invoke(nameof(DestroySelf), 2f);
     }
 
