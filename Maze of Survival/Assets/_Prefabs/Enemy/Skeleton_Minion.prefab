@@ -1370,6 +1370,7 @@ GameObject:
   - component: {fileID: 6735954171502056768}
   - component: {fileID: 2899073736986026255}
   - component: {fileID: 2599326415947133581}
+  - component: {fileID: 4119057313264503530}
   m_Layer: 0
   m_Name: Skeleton_Minion
   m_TagString: Enemy
@@ -1485,6 +1486,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 10
   hurtFx: {fileID: 2097788254477385201}
+--- !u!114 &4119057313264503530
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4340855906863563018}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 145951462bfc63d46913a0764b64d5bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentState: 0
+  player: {fileID: 0}
+  chaseRange: 10
+  attackRange: 2.5
+  attackCooldown: 2.5
 --- !u!1 &4527553504760943279
 GameObject:
   m_ObjectHideFlags: 0

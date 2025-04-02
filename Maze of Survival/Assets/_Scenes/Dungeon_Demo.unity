@@ -1235,6 +1235,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4119057313264503530, guid: 61a78d52439c0a640bbf32b3cfda1aeb, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 718490413}
     - target: {fileID: 4340855906863563018, guid: 61a78d52439c0a640bbf32b3cfda1aeb, type: 3}
       propertyPath: m_Name
       value: Skeleton_Minion (1)
@@ -3317,6 +3321,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4119057313264503530, guid: 61a78d52439c0a640bbf32b3cfda1aeb, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 718490413}
     - target: {fileID: 4340855906863563018, guid: 61a78d52439c0a640bbf32b3cfda1aeb, type: 3}
       propertyPath: m_Name
       value: Skeleton_Minion (7)
@@ -10444,6 +10452,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2749388c7cc2081469d411c0d3ba77c2, type: 3}
+--- !u!4 &718490413 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7713045525425278874, guid: 2749388c7cc2081469d411c0d3ba77c2, type: 3}
+  m_PrefabInstance: {fileID: 718490412}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &729431043
 GameObject:
   m_ObjectHideFlags: 0
@@ -12124,6 +12137,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4119057313264503530, guid: 61a78d52439c0a640bbf32b3cfda1aeb, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 718490413}
     - target: {fileID: 4340855906863563018, guid: 61a78d52439c0a640bbf32b3cfda1aeb, type: 3}
       propertyPath: m_Name
       value: Skeleton_Minion (4)
@@ -14959,6 +14976,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4119057313264503530, guid: 61a78d52439c0a640bbf32b3cfda1aeb, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 718490413}
     - target: {fileID: 4340855906863563018, guid: 61a78d52439c0a640bbf32b3cfda1aeb, type: 3}
       propertyPath: m_Name
       value: Skeleton_Minion (5)
@@ -15809,6 +15830,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4119057313264503530, guid: 61a78d52439c0a640bbf32b3cfda1aeb, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 718490413}
     - target: {fileID: 4340855906863563018, guid: 61a78d52439c0a640bbf32b3cfda1aeb, type: 3}
       propertyPath: m_Name
       value: Skeleton_Minion (2)
@@ -17866,6 +17891,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4119057313264503530, guid: 61a78d52439c0a640bbf32b3cfda1aeb, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 718490413}
     - target: {fileID: 4340855906863563018, guid: 61a78d52439c0a640bbf32b3cfda1aeb, type: 3}
       propertyPath: m_Name
       value: Skeleton_Minion (10)
@@ -21740,6 +21769,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4119057313264503530, guid: 61a78d52439c0a640bbf32b3cfda1aeb, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 718490413}
     - target: {fileID: 4340855906863563018, guid: 61a78d52439c0a640bbf32b3cfda1aeb, type: 3}
       propertyPath: m_Name
       value: Skeleton_Minion
@@ -22431,6 +22464,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4119057313264503530, guid: 61a78d52439c0a640bbf32b3cfda1aeb, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 718490413}
     - target: {fileID: 4340855906863563018, guid: 61a78d52439c0a640bbf32b3cfda1aeb, type: 3}
       propertyPath: m_Name
       value: Skeleton_Minion (3)
@@ -23461,6 +23498,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4119057313264503530, guid: 61a78d52439c0a640bbf32b3cfda1aeb, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 718490413}
     - target: {fileID: 4340855906863563018, guid: 61a78d52439c0a640bbf32b3cfda1aeb, type: 3}
       propertyPath: m_Name
       value: Skeleton_Minion (8)
@@ -24421,6 +24462,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4119057313264503530, guid: 61a78d52439c0a640bbf32b3cfda1aeb, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 718490413}
     - target: {fileID: 4340855906863563018, guid: 61a78d52439c0a640bbf32b3cfda1aeb, type: 3}
       propertyPath: m_Name
       value: Skeleton_Minion (9)
@@ -24788,6 +24833,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4119057313264503530, guid: 61a78d52439c0a640bbf32b3cfda1aeb, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 718490413}
     - target: {fileID: 4340855906863563018, guid: 61a78d52439c0a640bbf32b3cfda1aeb, type: 3}
       propertyPath: m_Name
       value: Skeleton_Minion (6)
