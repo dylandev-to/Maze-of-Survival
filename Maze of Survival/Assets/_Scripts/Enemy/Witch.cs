@@ -1,8 +1,7 @@
 using UnityEngine;
 using UnityEngine.AI;
-using System.Collections;
 
-public class Minion : MonoBehaviour
+public class Witch : MonoBehaviour
 {
     public enum State { Idle, Chase, Attack, Dead }
     public State currentState = State.Idle;
@@ -12,10 +11,14 @@ public class Minion : MonoBehaviour
     private Animator animator;
     private EnemyHealth enemyHealth;
 
-    public float chaseRange = 10f;
-    public float attackRange = 2.5f;
-    public float attackCooldown = 2.5f;
+    public GameObject projectilePrefab;
+    public Transform firePoint;
+
+    public float chaseRange = 15f;
+    public float attackRange = 15f;
+    public float attackCooldown = 3f;
     private float lastAttackTime;
+
     private bool isDead = false;
 
     void Start()
@@ -28,7 +31,7 @@ public class Minion : MonoBehaviour
 
     void Update()
     {
-        if (isDead || enemyHealth == null || player == null) return;
+        if (isDead || player == null) return;
 
         float distance = Vector3.Distance(transform.position, player.position);
 
@@ -46,6 +49,7 @@ public class Minion : MonoBehaviour
             case State.Chase:
                 animator.SetBool("isChasing", true);
                 animator.SetBool("isAttacking", false);
+                agent.isStopped = false;
                 agent.SetDestination(player.position);
                 if (distance < attackRange)
                 {
@@ -57,6 +61,8 @@ public class Minion : MonoBehaviour
                 animator.SetBool("isChasing", false);
                 animator.SetBool("isAttacking", true);
                 agent.isStopped = true;
+                transform.LookAt(player);
+
                 if (distance > attackRange)
                 {
                     ChangeState(State.Chase);
@@ -64,7 +70,7 @@ public class Minion : MonoBehaviour
                 else if (Time.time - lastAttackTime > attackCooldown)
                 {
                     lastAttackTime = Time.time;
-                    AttackPlayer();
+                    StartCoroutine(ShootProjectileDelayed(0.3f));
                 }
                 break;
         }
@@ -78,36 +84,52 @@ public class Minion : MonoBehaviour
         switch (newState)
         {
             case State.Idle:
-                agent.isStopped = true;
-                break;
-
-            case State.Chase:
-                agent.isStopped = false;
-                break;
-
             case State.Attack:
                 agent.isStopped = true;
+                break;
+            case State.Chase:
+                agent.isStopped = false;
                 break;
         }
     }
 
-    public void AttackPlayer()
+    public void ShootProjectile()
     {
-        PlayerHealth playerHealth = player.GetComponent<PlayerHealth>();
-        if (playerHealth != null)
+        Debug.Log("ShootProjectile()");
+        if (projectilePrefab != null && firePoint != null && player != null)
         {
-            playerHealth.TakeDamage(5);
+            GameObject projectile = Instantiate(projectilePrefab, firePoint.position, Quaternion.identity);
+            WitchShot shot = projectile.GetComponent<WitchShot>();
+            if (shot != null)
+            {
+                Vector3 direction = (player.position - firePoint.position).normalized;
+                shot.SetDirection(direction);
+            }
         }
+    }
+
+    private System.Collections.IEnumerator ShootProjectileDelayed(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        ShootProjectile();
+    }
+
+    public void ResetAttack()
+    {
+        animator.SetBool("isAttacking", false);
     }
 
     void HandleDeath()
     {
         isDead = true;
         currentState = State.Dead;
+
         agent.isStopped = true;
         animator.SetBool("isDead", true);
-        GetComponent<Collider>().enabled = false;
+        animator.SetBool("isChasing", false);
+        animator.SetBool("isAttacking", false);
 
+        GetComponent<Collider>().enabled = false;
         Destroy(gameObject, 3f);
     }
 }
