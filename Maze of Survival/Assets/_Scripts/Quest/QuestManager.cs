@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -35,6 +36,15 @@ public class QuestManager : MonoBehaviour
     void CompleteQuest()
     {
         questCompleteUI.SetActive(true);
+    }
+
+    private void Update()
+    {
+        if (questCompleteUI.activeInHierarchy)
+        {
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+        }
     }
 
     public void NextLevel()

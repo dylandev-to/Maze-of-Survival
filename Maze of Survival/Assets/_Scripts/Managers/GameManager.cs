@@ -18,6 +18,11 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public void RestartLevel()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
     public void LoadScene(string sceneName)
     {
         try

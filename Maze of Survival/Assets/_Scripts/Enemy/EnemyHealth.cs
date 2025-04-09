@@ -31,7 +31,7 @@ public class EnemyHealth : MonoBehaviour
     void Die()
     {
         animator.SetTrigger("isDead");
-        GetComponent<Collider>().enabled = false;
+        GetComponent<Collider>().enabled = false; 
 
         OnDeath?.Invoke();
 
