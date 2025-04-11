@@ -93,11 +93,11 @@ public class GhostSkull : MonoBehaviour
 
     public void AttackPlayer()
     {
-        /*PlayerHealth playerHealth = player.GetComponent<PlayerHealth>();
+        PlayerHealth playerHealth = player.GetComponent<PlayerHealth>();
         if (playerHealth != null)
         {
             playerHealth.TakeDamage(10);
-        }*/
+        }
     }
 
     void HandleDeath()
