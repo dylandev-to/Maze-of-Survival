@@ -3361,6 +3361,10 @@ PrefabInstance:
       propertyPath: chaseRange
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 4119057313264503530, guid: 61a78d52439c0a640bbf32b3cfda1aeb, type: 3}
+      propertyPath: attackDamage
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 4340855906863563018, guid: 61a78d52439c0a640bbf32b3cfda1aeb, type: 3}
       propertyPath: m_Name
       value: Skeleton_Minion (7)

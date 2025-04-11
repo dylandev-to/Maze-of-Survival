@@ -15,6 +15,7 @@ public class Minion : MonoBehaviour
     public float chaseRange = 10f;
     public float attackRange = 2.5f;
     public float attackCooldown = 2.5f;
+    public int attackDamage = 5;
     private float lastAttackTime;
     private bool isDead = false;
 
@@ -96,7 +97,7 @@ public class Minion : MonoBehaviour
         PlayerHealth playerHealth = player.GetComponent<PlayerHealth>();
         if (playerHealth != null)
         {
-            playerHealth.TakeDamage(5);
+            playerHealth.TakeDamage(attackDamage);
         }
     }
 

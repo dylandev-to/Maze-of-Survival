@@ -4865,6 +4865,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 718490413}
+    - target: {fileID: 1624212394649341544, guid: f512dffa03179c543a72e79aa71cfc0b, type: 3}
+      propertyPath: attackDamage
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 3051413832507893059, guid: f512dffa03179c543a72e79aa71cfc0b, type: 3}
       propertyPath: m_LocalScale.x
       value: 2
@@ -10281,6 +10285,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 718490413}
+    - target: {fileID: 7137154609595544588, guid: 6de35e013186a724f899e894b48e0f7c, type: 3}
+      propertyPath: projectilePrefab
+      value: 
+      objectReference: {fileID: 6281584636130488581, guid: eb47fe54bf1424a49b5595e163967014, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

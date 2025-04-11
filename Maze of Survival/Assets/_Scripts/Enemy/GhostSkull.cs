@@ -15,6 +15,7 @@ public class GhostSkull : MonoBehaviour
     public float chaseRange = 10f;
     public float attackRange = 2f;
     public float attackCooldown = 1.5f;
+    public int attackDamage = 10;
     private float lastAttackTime;
     private bool isDead = false;
 
@@ -96,7 +97,7 @@ public class GhostSkull : MonoBehaviour
         PlayerHealth playerHealth = player.GetComponent<PlayerHealth>();
         if (playerHealth != null)
         {
-            playerHealth.TakeDamage(10);
+            playerHealth.TakeDamage(attackDamage);
         }
     }
 
