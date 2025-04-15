@@ -1379,7 +1379,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 270291865}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 34535711}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: RestartLevel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &270291865
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6310,7 +6322,6 @@ RectTransform:
   m_Children:
   - {fileID: 996760849}
   - {fileID: 270291863}
-  - {fileID: 2095125277}
   m_Father: {fileID: 1297802850}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
@@ -9808,11 +9819,11 @@ RectTransform:
   m_GameObject: {fileID: 2095125276}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1231214783}
-  m_Father: {fileID: 1369454650}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -9862,7 +9873,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2095125279}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 34535711}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: ExitGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2095125279
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10682,3 +10705,4 @@ SceneRoots:
   - {fileID: 1761632361}
   - {fileID: 50705578}
   - {fileID: 823451968}
+  - {fileID: 2095125277}
